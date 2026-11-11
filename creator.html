@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Rajdhani:wght@400;600&display=swap" rel="stylesheet">
+    <title>Meet the Creator - ICT Club</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Rajdhani', sans-serif;
+            background-color: #f4f6f8;
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .navbar {
+            background-color: #1e293b;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            flex-wrap: wrap;
+        }
+
+        .nav-brand {
+            color: #fff;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 800;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1rem;
+        }
+
+        .nav-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+            padding: 0.5rem 0.8rem;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .nav-links a:hover,
+        .nav-links a[aria-current="page"] {
+            background-color: #334155;
+            color: #fff;
+        }
+
+        .nav-toggle {
+            display: none;
+            background: #334155;
+            color: #fff;
+            border: none;
+            padding: 0.5rem 0.8rem;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .nav-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                margin-top: 1rem;
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1rem;
+        }
+
+        .profile {
+            background: #ffffff;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            width: 100%;
+            max-width: 400px;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .photo {
+            position: relative;
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 1.5rem;
+            border-radius: 50%;
+            overflow: hidden;
+            background-color: #e2e8f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 3px solid #2563eb;
+        }
+
+        .photo .initials {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #2563eb;
+        }
+
+        .photo img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .profile h1 {
+            font-family: 'Orbitron', sans-serif;
+            color: #1e293b;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .details {
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .details div {
+            background-color: #f8fafc;
+            border-left: 4px solid #2563eb;
+            padding: 0.75rem 1rem;
+            border-radius: 4px;
+        }
+
+        .details dt {
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: #64748b;
+        }
+
+        .details dd {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #0f172a;
+            margin-top: 0.2rem;
+        }
+
+        footer {
+            background-color: #1e293b;
+            color: #94a3b8;
+            text-align: center;
+            padding: 1rem;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar" aria-label="Main navigation">
+        <a class="nav-brand" href="index.html">
+            <span class="mini-reactor" aria-hidden="true"></span>
+            ICT Club
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links"
+                onclick="var l=document.getElementById('nav-links');var o=l.classList.toggle('open');this.setAttribute('aria-expanded',o);">
+            Menu
+        </button>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">Homepage</a></li>
+            <li><a href="element-checker.html">Element Checker</a></li>
+            <li><a href="club-members.html">School Club Members</a></li>
+            <li><a href="creator.html" aria-current="page">Meet the Creator</a></li>
+        </ul>
+    </nav>
+
+   <main>
+    <section class="profile" aria-labelledby="creator-name">
+        <div class="photo">
+            <span class="initials" aria-hidden="true">CR</span>
+            <img src="Chesterphoto.jpg" alt="Photo of Chester Roxas" onerror="this.remove()">
+        </div>
+
+        <h1 id="creator-name">Chester Roxas</h1>
+
+        <dl class="details">
+            <div>
+                <dt>Grade and Section</dt>
+                <dd>10-Emerald</dd>
+            </div>
+            <div>
+                <dt>Campus</dt>
+                <dd>Greenhills</dd>
+            </div>
+        </dl>
+    </section>
+</main>
+
+    <footer>
+        &copy; 2026 <span>ICT Club</span> &bull; Meet the Creator
+    </footer>
+</body>
+</html>
